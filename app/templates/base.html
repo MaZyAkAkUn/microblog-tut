@@ -2,6 +2,10 @@
 
 {% block title %}
     {% if title %}{{ title }} - Microblog{% else %}Welcome to Microblog{% endif %}
+    {% block scripts %}
+        {{ super() }}
+        {{ moment.include_moment() }}
+    {% endblock %}
 {% endblock %}
 
 {% block navbar %}
